@@ -43,9 +43,10 @@ export default function Input() {
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
-    setInputValue(input.value);
-  //  const { value } = evt.target;
+    const { value } = evt.target;
+    setInputValue(value);
     /* STEP 4 */
+    // setInputValue(input.value) - this worked without the 'const { value } = evt.target' line of code
   };
 
   const reset = () => {
